@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN wget -c 'http://sourceforge.net/projects/boost/files/boost/1.67.0/boost_1_67_0.tar.bz2/download' && tar xf download&& rm download && mv boost_1_67_0 boost && cd boost
 RUN ./bootstrap.sh
-RUN ./b2 link=static -j 8 --build-dir=build64 --stagedir=stage
+RUN ./b2 link=static -j 8 --build-dir=build64 --stagedir=stage install
 RUN cd ..
 
 
